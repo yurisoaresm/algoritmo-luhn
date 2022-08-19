@@ -1,3 +1,15 @@
+"""
+Title       : Problem Set 1: Algoritmo de Luhn
+Description : Receber um número de cartão do usuário e verificar se o número é válido segundo o Algoritmo de
+            : Luhn e identificar a sua bandeira (Visa, Mastercard ou American Express)
+
+Author      : Yuri Soares (github.com/yurisoaresm)
+Language    : Python
+Version     : 3.10.6
+"""
+
+
+# Declaração de funções:
 # Função que identifica a bandeira do cartão (NOTA: apenas Visa, Mastercard ou American Express)
 def id_card(num):
     if str(num)[0] == '4':
@@ -37,7 +49,21 @@ def validate_card(num):
         return False
 
 
-card_num = int(input('Digite o número do cartão (apenas cartões Visa, American Express ou Mastercard): '))
+# Função que recebe o número do cartão e faz o tratamento de exceção
+def get_card():
+    flag = True
+    while flag:
+        try:
+            card = int(input('Digite o número do cartão '
+                             '(apenas Visa, American Express ou Mastercard e sem hifens): ').replace(' ', ''))
+            flag = False
+            return card
+        except ValueError:
+            print('Por favor, digite apenas números.')
+
+
+# Chamada do programa
+card_num = get_card()
 
 if validate_card(card_num):
     id_card(card_num)
