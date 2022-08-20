@@ -42,13 +42,13 @@ A única saída que será impressa no final do programa será AMEX\n (para cart�
 O programa pode ser executado conforme os exemplos abaixo:
 
     $ python path/credit.py
-    Digite o número do cartão apenas Visa, American Express ou Mastercard e sem hifens): 4222222222222
+    Digite o número do cartão (apenas Visa, American Express ou Mastercard e sem hifens): 4222222222222
     VISA
 
     $ python credit.py
-    Digite o número do cartão apenas Visa, American Express ou Mastercard e sem hifens): 371449635398431
+    Digite o número do cartão (apenas Visa, American Express ou Mastercard e sem hifens): 371449635398431
     AMEX
 
     $ python credit.py
-    Digite o número do cartão apenas Visa, American Express ou Mastercard e sem hifens): 1111111111111
+    Digite o número do cartão (apenas Visa, American Express ou Mastercard e sem hifens): 1111111111111
     INVÁLIDO
