@@ -12,12 +12,13 @@ Version     : 3.10.6
 # Declaração de funções:
 # Função que identifica a bandeira do cartão (NOTA: apenas Visa, Mastercard ou American Express)
 def id_card(num):
-    if str(num)[0] == '4':
+    num = str(num)
+    if num[0] == '4' and len(num) in [13, 16]:
         print('VISA\n')
     else:
-        if str(num)[0:2] in ['34', '37']:
+        if num[0:2] in ['34', '37'] and len(num) == 15:
             print('AMEX\n')
-        elif str(num)[0:2] in ['51', '52', '53', '54', '55']:
+        elif num[0:2] in ['51', '52', '53', '54', '55'] and len(num) == 16:
             print('MASTERCARD\n')
         else:
             print('INVÁLIDO\n')
